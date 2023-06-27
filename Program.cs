@@ -1,4 +1,4 @@
-﻿/*
+﻿
 // Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в
 // промежутке от N до 1. Выполнить с помощью рекурсии.
 Console.Write("Введите число: ");
@@ -14,10 +14,10 @@ string NaturalToLow( int start, int end)
 }
 
 Console.WriteLine($"Последовательность: '{NaturalToLow(count, numberN)}' ");
-*/
 
 
 
+/*
 //Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных 
 //элементов в промежутке от M до N.
 Console.Write("Задайте значения M:");
@@ -37,9 +37,33 @@ void SumElements( int start, int end, int sum)
     }
      SumElements(start + 1, end, sum); 
 }
+*/
 
 
- 
 
+/*
+ //Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии.
+ // Даны два неотрицательных числа m и n.
+Console.Write("Задайте значения M:");
+int numberM = Convert.ToInt32(Console.ReadLine());
+Console.Write("Задайте значения N:");
+int numberN = Convert.ToInt32(Console.ReadLine());
     
- 
+   
+int Function(int m, int n)
+{
+     if (m == 0) 
+     {
+       return n + 1;
+     }
+      if (n == 0) 
+      {
+          return Function(m - 1, 1);
+      }
+      return Function(m - 1, Function(m, n - 1));
+}
+
+Console.Write("функции Аккермана = " + Function(numberM, numberN));
+*/    
+
+
