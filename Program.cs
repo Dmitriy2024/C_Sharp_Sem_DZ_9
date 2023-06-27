@@ -1,16 +1,45 @@
-﻿// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в
+﻿/*
+// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в
 // промежутке от N до 1. Выполнить с помощью рекурсии.
-
 Console.Write("Введите число: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 int count = 1;
 
 
-string NaturalToLow( int count, int numberN)
+string NaturalToLow( int start, int end)
 {
-    if (count == numberN) return count.ToString()  ;
+    if (start == end) return start.ToString()  ;
     
-       return  count + "," + NaturalToLow(count + 1, numberN); 
+       return  start + "," + NaturalToLow(start + 1, end); 
 }
 
-Console.WriteLine($"Последовательность: '{NaturalToLow(1, numberN)}' ");
+Console.WriteLine($"Последовательность: '{NaturalToLow(count, numberN)}' ");
+*/
+
+
+
+//Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных 
+//элементов в промежутке от M до N.
+Console.Write("Задайте значения M:");
+int numberM = Convert.ToInt32(Console.ReadLine());
+Console.Write("Задайте значения N:");
+int numberN = Convert.ToInt32(Console.ReadLine());
+int temp =0 ;
+
+SumElements(numberM, numberN, temp);
+void SumElements( int start, int end, int sum)
+{
+     sum = sum + start;
+    if (start == end)  
+    {
+    Console.WriteLine("Сумма элементов = " + sum); 
+    return;
+    }
+     SumElements(start + 1, end, sum); 
+}
+
+
+ 
+
+    
+ 
